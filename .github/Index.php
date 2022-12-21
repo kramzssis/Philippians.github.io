@@ -1,3 +1,22 @@
+<?php
+    include 'connect.php';
+
+    if(isset($_POST['submit'])){
+        $Name = $_POST['Name'];
+        $Email = $_POST['Email'];
+        $Message = $_POST['Message'];
+
+        $query = "INSERT INTO contact (Name,Email,Message) VALUES ('$Name','$Email','$Message')";
+
+        $result = mysqli_query($con,$query);
+    }
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +26,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="screen and (max-width:800px)" href="tablet.css">
     <link rel="stylesheet" href="screen and (max-width:530px)" href="phone.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     </head>
     <body>
+      
         <nav class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -25,16 +46,26 @@
                 <button class="btn">
                    INFORMATION TECHNOLOGY THIRD YEAR COLLEGE 
                 </button>
+                <br>
+                
+                <p><span class="auto-type"></span></p>
             </div>
+
+            <section id="Video">
+                <video src="My.mp4" width="640" height="360" autoplay loop controls></video>
             </section>
+         
+
+            </section>
+            
 
             <section id="About">
                     <h1 class="headings">ABOUT ME</h1>
                     <div id="pic">
-                    <img src="Chan5.jpg" alt="">
+                    <img src="Xtian.jpg" alt="">
                     <div id="intro">
                         <h2>You can call me George</h2>
-                        <p>I am Christian George Santos, currently living at Batasan Bata, San Miguel, Bulacan and I am 21 years old. <br>
+                        <p>I am Christian George Santos, currently living at Batasan Bata, San Miguel, Bulacan and I am 22 years old. <br>
                             I am the second child among four children and I am playing taekwondo for sports. 
                             My family is my strength and weakness. <br>
                             They give me hope whenever I feel tired already and when I look at them, 
@@ -47,15 +78,16 @@
                 </div>
             </section>
 
+
             <section id="portfolio">
                 <h1 class="headings">PORTFOLIO</h1>
                 <div class="gallery">
-                    <img src="Chan1.jpg" alt="">
-                    <img src="Chan2.jpg" alt="">
-                    <img src="Chan3.jpg" alt="">
-                    <img src="Chan4.jpg" alt="">
-                    <img src="Chan5.jpg" alt="">
-                    <img src="Chan6.jpg" alt="">
+                    <img src="Chan1.jpeg" alt="">
+                    <img src="Chan4.jpeg" alt="">
+                    <img src="Chan3.jpeg" alt="">
+                    <img src="Chan7.jpg" alt="">
+                    <img src="Chan5.jpeg" alt="">
+                    <img src="Chan6_n.jpg" alt="">
                     
                 </div>
             </section>
@@ -68,7 +100,7 @@
                         <h1 class="headings">Personal Information</h1>
                         <strong>•Your First Name:</strong> Christian George</p>
                         <strong>My Birthday</strong> October 19, 2000</p>
-                        <strong>•My Age</strong> 21 Years Old.</p>
+                        <strong>•My Age</strong> 2 Years Old.</p>
                         <strong>•Resident of</strong> 176 Acasia St. Purok 7</p>
                         
 
@@ -98,13 +130,20 @@
 
             <section id="contact">
                 <h1 class="heading">CONTACT</h1>
-                <form action="" class="form">
-                <input type="text" name="name" class="input" placeholder="Enter Your Name">
-                <input type="email" name="email" class="input" placeholder="Enter Your Email">
-                <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
-                <input type="submit" value="SEND" id="send">
+                <form method="post" class="form">
+                    
+                <input type="text" name="Name" class="input" placeholder="Enter Your Name">
+                <input type="Email" name="Email" class="input" placeholder="Enter Your Email">
+                <textarea name="Message" id="msg" cols="30" rows="10"></textarea>
+                <button type="submit" class="btn btn2" name="submit">Submit</button>
+
             </section>
-      
-        
+        </form>
+
+      <script src="Index.js"></script>
+
+    
+
+        </script>
   </body>
 </html>

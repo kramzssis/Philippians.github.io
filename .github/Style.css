@@ -6,15 +6,16 @@
 
 html{
     scroll-behavior: smooth;
+
 }
+
 /* Navbar */
 .navbar{
     display: flex;
     justify-content: center;
     background-color:  rgba(0, 0, 0, 0.5);
     position: sticky;
-    top: 0;
-
+    top: 0%;
 
 }
 .navbar ul{
@@ -58,7 +59,7 @@ html{
     position: absolute;
     top: 0;
     right: 0;
-   background: url('Chan.jpg') no-repeat center center/cover;
+   background: url('Xtian7.jpeg') no-repeat center center/cover;
    height: 900px;
    width: 100%;
     z-index: -1;
@@ -93,20 +94,44 @@ html{
     box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
     font-weight: bold;
 }
+
+/* Video */
+
+#Video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    margin-top: 30%;
+    left: 25%;
+    border-radius: 15px;
+    border: 5px solid rgb(199, 193, 181);
+
+    
+   
+}
 /* About Section */
 #about{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 20px;
-    margin-bottom: 50px;
+    padding: 30px;
+    margin-bottom: 60px;
 }
 #pic{
     display: flex;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+     border: 10px solid rgb(179, 131, 37);
 }
 #pic img{
-    width: 575px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
+    border: 10px solid rgb(179, 131, 37);
+    border-radius: 10px;
 }
 #intro{
     display: flex;
@@ -128,25 +153,38 @@ html{
     color: white;
     align-items: center;
     padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    border: 10px solid rgb(179, 131, 37);
+    
+    
+    
 }
 .gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     box-sizing: border-box;
+    
 
 }
 .gallery img{
-    width: 360px;
-    height: 240px;
+    width: 300px;
+    height: 400px;
     margin: 10px;
+    border-radius: 10px;
+    border: 10px solid rgb(209, 233, 243);
 }
 
 /*Information Section */
 #Information{
     display: flex;
+    box-sizing: border-box;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 15px;
+     border: 10px solid rgb(179, 131, 37);
 }
 .row{
     display: flex;
